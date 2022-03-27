@@ -1,0 +1,32 @@
+.someClass {
+    border: 1px solid green;
+    outline: none;
+}
+
+.error {
+    border: 1px solid red;
+    outline: none;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.errorTitle{
+    color: red;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+}
+
+.button{
+    height: min-content;
+    background: #61DAFB;
+}

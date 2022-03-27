@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  margin: 0 auto;
+}
+.affair {
+  display: flex;
+  justify-content: space-between;
+}
+
+.affair__title{
+  font-weight: 900;
+  font-size: 20px;
+  color: #865dd5;
+}
+
+.affair__btn{
+  border: 1px solid #282C34;
+  cursor: pointer;
+  background: #61DAFB;
+  color: white;
+  transition: all ease-in-out .3s;
+}
+.affair__btn:hover{
+  opacity: .7;
+}

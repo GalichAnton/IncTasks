@@ -1,0 +1,20 @@
+.header{
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20%;
+}
+
+.link {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link_active{
+  color: aquamarine;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
