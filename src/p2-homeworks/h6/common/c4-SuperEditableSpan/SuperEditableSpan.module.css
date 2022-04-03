@@ -1,0 +1,12 @@
+.superSpan  {
+  position: relative;
+}
+.superSpan:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 2px;
+  left: -25px;
+  background: url("./edit.svg");
+}
