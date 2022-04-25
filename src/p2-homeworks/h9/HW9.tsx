@@ -3,15 +3,23 @@ import Clock from "./Clock";
 
 function HW9() {
   return (
-    <div>
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <hr />
+        homeworks 9{/* should work (должно работать)*/}
+        <Clock />
+        {/* для личного творчества, могу проверить*/}
+        {/* <AlternativeClock/>*/}
+      </div>
       <hr />
-      homeworks 9{/* should work (должно работать)*/}
-      <Clock />
       <hr />
-      {/* для личного творчества, могу проверить*/}
-      {/* <AlternativeClock/>*/}
-      <hr />
-    </div>
+    </>
   );
 }
 
