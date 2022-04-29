@@ -1,38 +1,46 @@
-import React from 'react'
-import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
-
+import React from "react";
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import { useDispatch, useSelector } from "react-redux";
+import { AppStoreType } from "./bll/store";
+import { loadingAC } from "./bll/loadingReducer";
+import styles from "./HW10.module.css";
 function HW10() {
-    // useSelector, useDispatch
-    const loading = false
+  // useSelector, useDispatch
+  const dispatch = useDispatch();
+  const loading = useSelector<AppStoreType>((state) => state.loading.loading);
 
-    const setLoading = () => {
-        // dispatch
-        // setTimeout
-        console.log('loading...')
-    };
+  const setLoading = () => {
+    // dispatch
+    // setTimeout
+    dispatch(loadingAC());
+    setTimeout(() => dispatch(loadingAC()), 5000);
+  };
 
-    return (
-        <div>
-            <hr/>
-            homeworks 10
-
-            {/*should work (должно работать)*/}
-            {loading
-                ? (
-                    <div>крутилка...</div>
-                ) : (
-                    <div>
-                        <SuperButton onClick={setLoading}>set loading...</SuperButton>
-                    </div>
-                )
-            }
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<Alternative/>*/}
-            <hr/>
-        </div>
-    )
+  return (
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        homeworks 10
+        {/* should work (должно работать)*/}
+        {loading ? (
+          <div className={styles.loading}>крутилка...</div>
+        ) : (
+          <div>
+            <SuperButton onClick={setLoading}>set loading...</SuperButton>
+          </div>
+        )}
+      </div>
+      <hr />
+      {/* для личного творчества, могу проверить*/}
+      {/* <Alternative/>*/}
+      <hr />
+    </>
+  );
 }
 
-export default HW10
+export default HW10;
