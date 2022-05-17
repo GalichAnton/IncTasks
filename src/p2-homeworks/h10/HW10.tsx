@@ -1,13 +1,13 @@
 import React from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
-import { useDispatch, useSelector } from "react-redux";
-import { AppStoreType } from "./bll/store";
+import { useDispatch } from "react-redux";
+import { useAppSelector } from "./bll/store";
 import { loadingAC } from "./bll/loadingReducer";
 import styles from "./HW10.module.css";
 function HW10() {
   // useSelector, useDispatch
   const dispatch = useDispatch();
-  const loading = useSelector<AppStoreType>((state) => state.loading.loading);
+  const loading = useAppSelector((state) => state.loading.loading);
 
   const setLoading = () => {
     // dispatch
